@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Create Performance Metrics</title>
+</head>
+<body>
+    <h1>Create Performance Metrics for {{ player.name }}</h1>
+    <form method="post">
+        {% csrf_token %}
+        <h2>Physical Metrics</h2>
+        <label for="speed">Speed:</label>
+        <input type="number" step="0.01" id="speed" name="speed" required><br>
+        
+        <label for="agility">Agility:</label>
+        <input type="number" step="0.01" id="agility" name="agility" required><br>
+        
+        <label for="strength">Strength:</label>
+        <input type="number" step="0.01" id="strength" name="strength" required><br>
+        
+        <label for="endurance">Endurance:</label>
+        <input type="number" step="0.01" id="endurance" name="endurance" required><br>
+        
+        <h2>Technical Metrics</h2>
+        <label for="pass_accuracy">Pass Accuracy:</label>
+        <input type="number" step="0.01" id="pass_accuracy" name="pass_accuracy" required><br>
+        
+        <label for="shooting_accuracy">Shooting Accuracy:</label>
+        <input type="number" step="0.01" id="shooting_accuracy" name="shooting_accuracy" required><br>
+        
+        <label for="ball_control">Ball Control:</label>
+        <input type="number" step="0.01" id="ball_control" name="ball_control" required><br>
+        
+        <input type="submit" value="Create Metrics" class="btn btn-primary">
+    </form>
+    <a href="{% url 'player_detail' player.id %}" class="btn btn-danger">Cancel</a>
+</body>
+</html>
+{% endblock %}

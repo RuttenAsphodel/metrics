@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1>{{ player.name }} - Performance Chart</h1>
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            {{ chart_div|safe }}
+        </div>
+    </div>
+{% endblock %}

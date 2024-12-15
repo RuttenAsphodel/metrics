@@ -1,0 +1,21 @@
+<!-- metrics/key_metrics.html -->
+{% extends 'base.html' %}
+
+{% block content %}
+  <h1>{{ player.name }} - Metricas de Jugador</h1>
+
+  <h2>Physical Metrics</h2>
+  <p>Velocidad de Carrera: {{ sprint_speed|floatformat:2 }} m/s</p>
+  <p>Salto Vertical: {{ vertical_jump|floatformat:2 }} cm</p>
+  <p>Fuerza de Disparo: {{ shot_power|floatformat:2 }} N</p>
+
+  <h2>Technical Metrics</h2>
+  <p>Precision de Pase: {{ pass_accuracy|floatformat:2 }}%</p>
+  <p>Precision de Disparo: {{ shooting_accuracy|floatformat:2 }}%</p>
+
+  <a href="{% url 'metrics_create' player.id %}" class="btn btn-primary">Add Metrics</a>
+  <a href="{% url 'metrics_update' player.id %}" class="btn btn-primary">Edit Metrics</a>
+  <a href="{% url 'player_detail' player.id %}" class="btn btn-danger">Back to Player Details</a>
+  <a href="{% url 'performance_charts' player.id %}" class="btn btn-primary">Graficos de Rendimiento</a>
+
+{% endblock %}

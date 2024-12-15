@@ -1,0 +1,11 @@
+Ejecutar en terminal para instalar dependencias y librerias
+
+# Levantar entorno virtual 
+virtualenv venv-metrics
+.\venv-metrics\Scripts\activate
+
+pip install -r requirements.txt
+python manage.py makemigrations
+python manage.py migrate
+
+

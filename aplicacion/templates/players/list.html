@@ -1,0 +1,27 @@
+<!-- players/list.html -->
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1>Lista de Jugadores</h1>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Nombre Jugador</th>
+                <th>Acciones</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for player in players %}
+            <tr>
+                <td>{{ player.name }}</a></td>
+                <td>
+                    <a href="{% url 'resumen_performance' player.id %}" class="btn btn-primary btn-sm">Ver Metricas</a>
+                </td>
+                <td>
+                    <a href="{% url 'metrics_create' player.id %}" class="btn btn-success btn-sm">Crear Metricas</a>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}

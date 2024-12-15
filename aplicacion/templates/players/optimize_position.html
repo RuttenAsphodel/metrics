@@ -1,0 +1,7 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1>Optimize Position for {{ player.name }}</h1>
+    <p>Based on the player's metrics, the recommended position is: <strong>{{ recommended_position }}</strong></p>
+    <a href="{% url 'player_detail' player.id %}" class="btn btn-primary">Back to Player Details</a>
+{% endblock %}

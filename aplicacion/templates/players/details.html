@@ -1,0 +1,11 @@
+<!-- players/detail.html -->
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1>{{ player.name }}</h1>
+    <p>Position: {{ player.position }}</p>
+    <p>Team ID: {{ player.team_id }}</p>
+
+   
+    <a href="{% url 'metrics_create' player.id %}" class="btn btn-success">Recopilar Metricas</a>
+{% endblock %}

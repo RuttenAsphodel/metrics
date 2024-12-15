@@ -1,0 +1,39 @@
+<!-- metrics/detail.html -->
+{% extends 'base.html' %}
+
+{% block content %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Performance Metrics</title>
+</head>
+<body>
+    <h1>Performance Metrics for {{ player.name }}</h1>
+    
+    <h2>Physical Metrics</h2>
+    {% if physical_metrics %}
+    <p><strong>Speed:</strong> {{ physical_metrics.speed }}</p>
+    <p><strong>Agility:</strong> {{ physical_metrics.agility }}</p>
+    <p><strong>Strength:</strong> {{ physical_metrics.strength }}</p>
+    <p><strong>Endurance:</strong> {{ physical_metrics.endurance }}</p>
+    {% else %}
+    <p>No physical metrics available</p>
+    {% endif %}
+    
+    <h2>Technical Metrics</h2>
+    {% if technical_metrics %}
+    <p><strong>Pass Accuracy:</strong> {{ technical_metrics.pass_accuracy }}</p>
+    <p><strong>Shooting Accuracy:</strong> {{ technical_metrics.shooting_accuracy }}</p>
+    <p><strong>Ball Control:</strong> {{ technical_metrics.ball_control }}</p>
+    {% else %}
+    <p>No technical metrics available</p>
+    {% endif %}
+    
+    <a href="{% url 'metrics_create' player.id %}">Add Metrics</a>
+    <a href="{% url 'metrics_update' player.id %}">Edit Metrics</a>
+    <a href="{% url 'player_detail' player.id %}">Back to Player Details</a>
+    <a href="{% url 'performance_charts' player.id %}" class="btn btn-primary">Graficos de Rendimiento</a>
+
+</body>
+</html>
+{% endblock %}
