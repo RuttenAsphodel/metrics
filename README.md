@@ -1,35 +1,40 @@
-Modelo de Análisis de Rendimiento Deportivo
-  
-Tema de investigación: 
-Optimización de posiciones en el campo de juego
+# Modelo de Análisis de Rendimiento Deportivo
 
-Integrantes: 
-•	Cristian Valenzuela 
-•	Daniel Gallardo
+## Tema de Investigación
+**Optimización de posiciones en el campo de juego**
 
-Profesor: 
-•	Carolina Gomez 
+## Integrantes
+- Cristian Valenzuela
+- Daniel Gallardo
 
-Asignatura: 
-•	Funciones y Matrices
+## Profesor
+- Carolina Gomez
 
-Sección: 
-•	MTFM01/V-CT0-N2-P3-C1/V Santiago Centro CT
+## Asignatura
+- Funciones y Matrices
 
-Carrera: 
-•	Ingeniería en Informática
+## Sección
+- MTFM01/V-CT0-N2-P3-C1/V Santiago Centro CT
 
+## Carrera
+- Ingeniería en Informática
 
-Instrucciones de Ejecución de Aplicación
+---
 
-Ejecutar entorno virtual
-•	.\venv-metrics\Scripts\activate
+## Instrucciones de Ejecución de la Aplicación
 
-Cargar ejecutar servidor 
-•	python manage.py runserver
+### Ejecutar entorno virtual
+```bash
+.\venv-metrics\Scripts\activate
+```
 
-Abrir en navegador
-•	http://127.0.0.1:8000/aplicacion/
+### Cargar y ejecutar servidor
+```bash
+python manage.py runserver
+```
+
+### Abrir en el navegador
+[http://127.0.0.1:8000/aplicacion/](http://127.0.0.1:8000/aplicacion/)
 
 
 
